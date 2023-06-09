@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>mouse coordinates</title>
+</head>
+<body>
+  <h2>click get locations</h2>
+  <div class="container">
+ <div id="x-container">X coordinate: <span id="x"></span>-</div>
+ <div id="y-container">Y coordinate: <span id="y"></span>-</div>
+
+  </div>
+  <script>
+  const x = document.getElementById('x');
+  const y = document.getElementById('y');
+
+  window.addEventListener('click', function(event) {
+    x.textContent = event.clientX;
+    y.textContent = event.clientY;
+  });
+
+</script>
+</body>
+</html>
